@@ -1,0 +1,80 @@
+:root {
+  --tinta: #1b1340;
+  --tinta-suave: #4d4570;
+  --fondo: #f4f1ff;
+  --blanco: #ffffff;
+  --violeta: #6c4cff;
+  --violeta-oscuro: #5436e0;
+  --coral: #ff5d73;
+  --sol: #ffd23f;
+  --menta: #35d6a8;
+  --cielo: #5cc8ff;
+  --rosa: #ffb3c7;
+  --borde: 3px solid var(--tinta);
+  --sombra: 6px 6px 0 var(--tinta);
+  --sombra-s: 4px 4px 0 var(--tinta);
+  --radio: 16px;
+  --fuente: "Bricolage Grotesque", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+[id] { scroll-margin-top: 90px; }
+@media (max-width: 700px) { [id] { scroll-margin-top: 120px; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--fuente);
+  color: var(--tinta);
+  background-color: var(--fondo);
+  background-image: radial-gradient(rgba(27, 19, 64, 0.14) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
+  line-height: 1.5;
+}
+
+img { max-width: 100%; display: block; }
+h1, h2, h3, p { margin: 0; }
+button { font: inherit; cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+
+:focus-visible { outline: 4px solid var(--violeta); outline-offset: 3px; }
+
+/* Botón principal: relieve "pegatina" que se hunde al presionar */
+.btn {
+  display: inline-block;
+  border: var(--borde);
+  border-radius: 12px;
+  padding: 0.65rem 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+  background: var(--violeta);
+  color: #fff;
+  box-shadow: var(--sombra-s);
+  transition: transform 0.12s, box-shadow 0.12s, background 0.12s;
+}
+.btn:hover:not(:disabled) { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--tinta); background: var(--violeta-oscuro); }
+.btn:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--tinta); }
+.btn:disabled { background: #cfc9e8; color: #6f688f; box-shadow: none; border-color: #9a93bd; }
+.btn--claro { background: var(--sol); color: var(--tinta); }
+.btn--claro:hover:not(:disabled) { background: #ffc61a; }
+
+/* Colores de las "baldosas" de producto, repartidos por id */
+.tono-0 { background: var(--sol); }
+.tono-1 { background: var(--menta); }
+.tono-2 { background: var(--cielo); }
+.tono-3 { background: var(--rosa); }
+
+.solo-lectores {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

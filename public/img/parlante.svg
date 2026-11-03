@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="parlante"><g fill="none" stroke="#1b1340" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="200" cy="274" rx="95" ry="9" fill="#1b1340" opacity=".18" stroke="none"/>
+<path d="M92 128q-18 30 0 62M74 108q-34 62 0 104M308 128q18 30 0 62M326 108q34 62 0 104" fill="none" stroke-width="6"/>
+<rect x="112" y="30" width="176" height="226" rx="38" fill="#6c4cff"/>
+<circle cx="200" cy="170" r="56" fill="#ffffff"/>
+<circle cx="200" cy="170" r="32" fill="#ff5d73" stroke-width="6"/>
+<circle cx="200" cy="170" r="10" fill="#1b1340" stroke="none"/>
+<circle cx="200" cy="82" r="24" fill="#ffffff"/>
+<circle cx="200" cy="82" r="9" fill="#ffd23f" stroke-width="5"/>
+<path transform="translate(318 50) scale(0.8)" d="M0 -14l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z" fill="#ffffff" stroke-width="4"/></g></svg>
